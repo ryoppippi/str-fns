@@ -5,6 +5,6 @@ export default defineConfig({
 		'import.meta.vitest': false
 	},
 	test: {
-		includeSource: ['src/**/*.{js,ts}']
+		includeSource: ['tests/**/*.{js,ts}']
 	}
 });
