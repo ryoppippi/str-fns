@@ -1,0 +1,42 @@
+on:
+  - push
+  - pull_request
+
+permissions: read-all
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Launch Turbo Remote Cache Server
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1.1.0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: package.json
+          cache: 'pnpm'
+
+      - uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: linting
+        run: pnpm lint
+
+      - name: check
+        run: pnpm test

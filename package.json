@@ -31,6 +31,10 @@
 		"vitest": "^0.32.3"
 	},
 	"license": "MIT",
+	"volta": {
+		"node": "18.16.0",
+		"pnpm": "8.6.0"
+	},
 	"engines": {
 		"npm": "use pnpm please!",
 		"yarn": "use pnpm please!",
