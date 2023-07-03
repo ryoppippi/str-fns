@@ -12,7 +12,7 @@ module.exports = {
 	},
 	ignorePatterns: ['*.cjs'],
 
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint', 'jsdoc'],
 	rules: {
 		'@typescript-eslint/no-explicit-any': 1,
 		'@typescript-eslint/no-non-null-assertion': 1,
