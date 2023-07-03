@@ -1,0 +1,21 @@
+{
+  "name": "str-fns",
+  "description": "a collection of string functions",
+  "version": "0.0.1",
+  "author": "@ryoppippi",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "string",
+    "functions",
+    "utils",
+    "typescript",
+    "typesafe"
+  ],
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@8.6.3"
+}
