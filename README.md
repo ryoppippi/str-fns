@@ -1,5 +1,8 @@
 # str-fns
 
+[![npm version](https://badge.fury.io/js/str-fns.svg)](https://badge.fury.io/js/str-fns)
+[![.github/workflows/ci.yml](https://github.com/ryoppippi/str-fns/actions/workflows/ci.yml/badge.svg)](https://github.com/ryoppippi/str-fns/actions/workflows/ci.yml)
+
 A collection of type-safe string functions written in pure JavaScript + JSDoc.
 
 ## Why str-fns
