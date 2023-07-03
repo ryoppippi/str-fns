@@ -1,3 +1,4 @@
 {
-	"src/*.{js,jsx}": ["pnpm format", "pnpm lint", "pnpm test -- --run"]
+	"src/*.{js,jsx}": ["pnpm format", "pnpm lint"],
+	"src/*.test.{js,jsx}": ["pnpm test -- --run"]
 }

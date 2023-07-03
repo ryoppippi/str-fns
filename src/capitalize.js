@@ -12,7 +12,7 @@
  *
  * @param {T} input - input string to capitalize. type should be matched to T
  *
- * @returns {Readonly<CapitalizedString<T>>}
+ * @returns {CapitalizedString<T>}
  *
  * @example
  * capitalize('a') // returns 'A'
@@ -26,7 +26,5 @@
  */
 export function capitalize(input) {
 	const [first, ...rest] = input;
-	return /** @type {Readonly<CapitalizedString<T>>} */ (
-		`${first?.toUpperCase() ?? ''}${rest.join('')}`
-	);
+	return /** @type {CapitalizedString<T>} */ (`${first?.toUpperCase() ?? ''}${rest.join('')}`);
 }
