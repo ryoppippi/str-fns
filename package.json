@@ -1,7 +1,7 @@
 {
 	"name": "str-fns",
 	"description": "a collection of string functions",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "@ryoppippi",
 	"type": "module",
 	"main": "src/index.js",
