@@ -3,6 +3,7 @@ node_modules
 LICENSE
 
 .github/ISSUE_TEMPLATE
+.github/release.yml
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
