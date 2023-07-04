@@ -17,6 +17,12 @@ One of the reasons is that it is hard to jump to the definition of a function wh
 I want to make it easy to jump to the definition of a function, so I use JavaScript.  
 Don't worry, I use JSDoc to make it type-safe.
 
+## API
+
+- [capitalize](src/capitalize.js) - Capitalize the first letter of a string.
+- [toUpperCase](src/uppercase.js) - Convert a string to uppercase.
+- [toLowerCase](src/lowercase.js) - Convert a string to lowercase.
+
 ## Related Works
 
 - [native-dash](https://github.com/yankeeinlondon/native-dash)
