@@ -19,6 +19,6 @@
 		"exactOptionalPropertyTypes": true,
 		"types": ["./src/type", "vitest/importMeta"]
 	},
-	"include": ["src", "tests"],
+	"include": ["src", "types"],
 	"exclude": ["node_modules"]
 }
