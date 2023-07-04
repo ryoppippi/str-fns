@@ -5,6 +5,11 @@ export default defineConfig({
 		'import.meta.vitest': false
 	},
 	test: {
-		includeSource: ['src/**/*.test.{js,ts}']
+		includeSource: ['src/**/*.test.{js,ts}'],
+		browser: {
+			enabled: true,
+			name: 'chrome',
+			headless: true
+		}
 	}
 });
