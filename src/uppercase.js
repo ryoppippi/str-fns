@@ -6,7 +6,7 @@
  */
 
 /**
- * @description capitalize first letter of string
+ * @description get uppercase string
  *
  * @template {Readonly<string>} T
  *
