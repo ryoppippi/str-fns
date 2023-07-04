@@ -2,17 +2,17 @@
 
 /**
  * @template {Readonly<string>} T
- * @typedef {import('type-fest').IsStringLiteral<T> extends true ? Uppercase<T> : string} UppercaseString<T>
+ * @typedef {import('type-fest').IsStringLiteral<T> extends true ? Lowercase<T> : string} LowercaseString<T>
  */
 
 /**
- * @description get uppercase string
+ * @description get lowercase string
  *
  * @template {Readonly<string>} T
  *
  * @param {T} input - input string to capitalize. type should be matched to T
  *
- * @returns {UppercaseString<T>}
+ * @returns {LowercaseString<T>}
  *
  * @example
  * uppercase('a') // 'A'
@@ -24,6 +24,6 @@
  * uppercase('') // ''
  *
  */
-export function toUpperCase(input) {
-	return /** @type {UppercaseString<T>} */ (input.toUpperCase());
+export function toLowerCase(input) {
+	return /** @type {LowercaseString<T>} */ (input.toLowerCase());
 }
