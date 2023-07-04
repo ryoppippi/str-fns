@@ -12,7 +12,7 @@
 		"lint": "prettier --check . && eslint .",
 		"test": "vitest",
 		"prepare": "husky install",
-		"prepublishOnly": "pnpm run lint && publint && pnpm run test && pnpm run build"
+		"prepublishOnly": "pnpm run lint && publint && vitest --run && pnpm run build"
 	},
 	"files": [
 		"src",
