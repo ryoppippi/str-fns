@@ -24,6 +24,6 @@
  * uppercase('') // ''
  *
  */
-export function uppercase(input) {
+export function toUpperCase(input) {
 	return /** @type {UppercaseString<T>} */ (input.toUpperCase());
 }
