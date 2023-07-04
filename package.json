@@ -3,6 +3,7 @@
 	"description": "a collection of string functions",
 	"version": "0.0.3",
 	"author": "@ryoppippi",
+	"repository": "ryoppippi/str-fns",
 	"type": "module",
 	"main": "src/index.js",
 	"types": "./types/index.d.ts",
