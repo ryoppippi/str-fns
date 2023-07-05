@@ -15,13 +15,13 @@
  * @returns {LowercaseString<T>}
  *
  * @example
- * uppercase('a') // 'A'
+ * toLowerCase('A') // 'a'
  *
  * @example
- * uppercase('abc') // 'Abc'
+ * toLowerCase('aBC') // 'abc'
  *
  * @example
- * uppercase('') // ''
+ * toLowerCase('') // ''
  *
  */
 export function toLowerCase(input) {
