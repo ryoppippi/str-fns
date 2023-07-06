@@ -19,9 +19,9 @@ Don't worry, I use JSDoc to make it type-safe.
 
 ## API
 
-- [capitalize](src/capitalize.js) - Capitalize the first letter of a string.
-- [toUpperCase](src/uppercase.js) - Convert a string to uppercase.
-- [toLowerCase](src/lowercase.js) - Convert a string to lowercase.
+- [`capitalize`](src/capitalize.js) - Capitalize the first letter of a string.
+- [`uppercase`](src/uppercase.js) - Convert a string to uppercase.
+- [`lowercase`](src/lowercase.js) - Convert a string to lowercase.
 
 ## Related Works
 

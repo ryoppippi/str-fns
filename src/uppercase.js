@@ -15,15 +15,15 @@
  * @returns {UppercaseString<T>}
  *
  * @example
- * toUpperCase('a') // 'A'
+ * uppercase('a') // 'A'
  *
  * @example
- * toUpperCase('abc') // 'Abc'
+ * uppercase('abc') // 'Abc'
  *
  * @example
- * toUpperCase('') // ''
+ * uppercase('') // ''
  *
  */
-export function toUpperCase(input) {
+export function uppercase(input) {
 	return /** @type {UppercaseString<T>} */ (input.toUpperCase());
 }
