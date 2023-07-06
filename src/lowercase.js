@@ -15,15 +15,15 @@
  * @returns {LowercaseString<T>}
  *
  * @example
- * toLowerCase('A') // 'a'
+ * lowercase('A') // 'a'
  *
  * @example
- * toLowerCase('aBC') // 'abc'
+ * lowercase('aBC') // 'abc'
  *
  * @example
- * toLowerCase('') // ''
+ * lowercase('') // ''
  *
  */
-export function toLowerCase(input) {
+export function lowercase(input) {
 	return /** @type {LowercaseString<T>} */ (input.toLowerCase());
 }
