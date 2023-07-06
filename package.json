@@ -1,7 +1,7 @@
 {
 	"name": "str-fns",
 	"description": "a collection of string functions",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"author": "@ryoppippi",
 	"repository": "ryoppippi/str-fns",
 	"type": "module",
