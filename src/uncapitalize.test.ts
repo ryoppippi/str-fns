@@ -1,4 +1,4 @@
-import { uncapitalize } from './uncapitalize.js';
+import { uncapitalize } from '.';
 import { describe, it, expect } from 'vitest';
 describe('uncapitalize test', () => {
 	it('should uncapitalize one uppercase letter', () => {

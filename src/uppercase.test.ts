@@ -1,4 +1,4 @@
-import { uppercase } from './uppercase.js';
+import { uppercase } from '.';
 import { describe, it, expect } from 'vitest';
 describe('uppercase test', () => {
 	it('should one uppercase letter', () => {

@@ -1,4 +1,4 @@
-import { lowercase } from './lowercase.js';
+import { lowercase } from '.';
 import { describe, it, expect } from 'vitest';
 describe('lowercase test', () => {
 	it('should lowercase one letter', () => {
