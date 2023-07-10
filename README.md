@@ -23,6 +23,7 @@ Don't worry, I use JSDoc to make it type-safe.
 - [`uncapitalize`](src/uncapitalize.js) - Uncapitalize the first letter of a string.
 - [`uppercase`](src/uppercase.js) - Convert a string to uppercase.
 - [`lowercase`](src/lowercase.js) - Convert a string to lowercase.
+- [`split`](src/split.js) - Split a string into substrings using the specified separator and return them as an array.
 
 ## Related Works
 
