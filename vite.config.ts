@@ -6,10 +6,14 @@ export default defineConfig({
 	},
 	test: {
 		includeSource: ['src/**/*.test.{js,ts}'],
-		browser: {
-			enabled: true,
-			name: 'chrome',
-			headless: true
+		typecheck: {
+			include: ['src/**/*.{js,ts}'],
+			allowJs: true
 		}
+		// browser: {
+		// 	enabled: true,
+		// 	name: 'chrome',
+		// 	headless: true
+		// }
 	}
 });

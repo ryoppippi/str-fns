@@ -17,7 +17,7 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
-		"types": ["./src/type", "vitest/importMeta"]
+		"types": ["./types", "vitest/importMeta"]
 	},
 	"include": ["src", "types"],
 	"exclude": ["node_modules"]
