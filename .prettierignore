@@ -2,6 +2,8 @@
 node_modules
 LICENSE
 
+coverage
+
 .github/ISSUE_TEMPLATE
 .github/release.yml
 
