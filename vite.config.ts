@@ -9,11 +9,9 @@ export default defineConfig({
 		typecheck: {
 			include: ['src/**/*.{js,ts}'],
 			allowJs: true
+		},
+		coverage: {
+			reporter: ['html', 'text', 'json-summary', 'json']
 		}
-		// browser: {
-		// 	enabled: true,
-		// 	name: 'chrome',
-		// 	headless: true
-		// }
 	}
 });
