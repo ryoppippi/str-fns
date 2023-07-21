@@ -1,13 +1,17 @@
 import { defineConfig } from 'vitest/config';
 
+const include = ['src/**/*.js'];
+const exclude = ['src/index.js'];
 export default defineConfig({
 	define: {
 		'import.meta.vitest': false
 	},
 	test: {
-		includeSource: ['src/**/*.test.{js,ts}'],
+		include,
+		exclude,
 		typecheck: {
-			include: ['src/**/*.{js,ts}'],
+			include,
+			exclude,
 			allowJs: true
 		},
 		coverage: {
