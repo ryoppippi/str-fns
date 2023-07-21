@@ -9,6 +9,7 @@ export default defineConfig({
 	test: {
 		include,
 		exclude,
+		includeSource: include,
 		typecheck: {
 			include,
 			exclude,
