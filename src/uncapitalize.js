@@ -28,3 +28,33 @@ export function uncapitalize(input) {
 	const [first, ...rest] = input;
 	return /** @type {UncapitalizedString<T>} */ ([first?.toLowerCase(), ...rest].join(''));
 }
+
+if (import.meta.vitest != null) {
+	const { describe, it, expect } = import.meta.vitest;
+	describe('uncapitalize test', () => {
+		it('should uncapitalize one letter', () => {
+			const before = /** @type {const} */ ('A');
+			const uncapitalized = uncapitalize(before);
+			const expected = /** @satisfies {typeof uncapitalized} */ ('a');
+			expect(uncapitalized).toBe(expected);
+		});
+		it('should uncapitalize a word', () => {
+			const before = /** @type {const} */ ('a');
+			const uncapitalized = uncapitalize(before);
+			const expected = /** @satisfies {typeof uncapitalized} */ ('a');
+			expect(uncapitalized).toBe(expected);
+		});
+		it('should uncapitalize a word', () => {
+			const before = /** @type {const} */ ('Abc');
+			const uncapitalized = uncapitalize(before);
+			const expected = /** @satisfies {typeof uncapitalized} */ ('abc');
+			expect(uncapitalized).toBe(expected);
+		});
+		it('should uncapitalize a sentence', () => {
+			const before = /** @type {const} */ ('');
+			const uncapitalized = uncapitalize(before);
+			const expected = /** @satisfies {typeof uncapitalized} */ ('');
+			expect(uncapitalized).toBe(expected);
+		});
+	});
+}
