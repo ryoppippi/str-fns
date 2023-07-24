@@ -7,7 +7,7 @@ coverage
 .github/ISSUE_TEMPLATE
 .github/release.yml
 
-types/
+dist/
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
