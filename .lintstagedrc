@@ -1,4 +1,0 @@
-{
-	"src/*.{js,ts}": ["pnpm format", "pnpm lint"],
-	"src/*.test.{js,ts}": ["pnpm npm-run-all 'test:* -- --run'"]
-}
