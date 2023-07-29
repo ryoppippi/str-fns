@@ -1,6 +1,8 @@
 on:
-  - push
-  - pull_request
+  schedule:
+    - cron: '0 9 * * *'
+  push:
+  pull_request:
 
 permissions:
   contents: read
