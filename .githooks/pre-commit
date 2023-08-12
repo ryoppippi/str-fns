@@ -1,3 +1,9 @@
 #!/bin/sh
 
+# get the list of staged files
+files=$(git diff --cached --name-only --diff-filter=ACM)
+
+git stash -k
 pnpm lint-staged
+git add $files
+git stash pop
