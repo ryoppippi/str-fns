@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^0.34.1
     version: 0.34.1(vitest@0.34.1)
   dts-buddy:
-    specifier: ^0.1.9
-    version: 0.1.9
+    specifier: ^0.1.12
+    version: 0.1.12
   eslint:
     specifier: ^8.47.0
     version: 8.47.0
@@ -1489,8 +1489,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dts-buddy@0.1.9:
-    resolution: {integrity: sha512-I12BngU+NFY2njbTFCpiDqyvEFSYoMxqMpwBt1pykBEbWY6DbyDd9m0GOzd1hhpSDHDulgmQUntw5EZPNaptNA==}
+  /dts-buddy@0.1.12:
+    resolution: {integrity: sha512-3HcUQnmG02fPSFL/Y1Ufh4oAGpaJ8cN4UP60Q1ll014LSwfS7XceMr7jBt9k55cT+dznZsQCxOx2tITgq/WHsw==}
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.5
