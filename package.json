@@ -60,12 +60,12 @@
 	"license": "MIT",
 	"volta": {
 		"node": "18.16.0",
-		"pnpm": "8.6.0"
+		"pnpm": "8.6.12"
 	},
 	"engines": {
 		"npm": "use pnpm please!",
 		"yarn": "use pnpm please!",
-		"pnpm": ">=8.6.0"
+		"pnpm": ">=8.6.12"
 	},
 	"lint-staged": {
 		"src/*.{js,ts,json}": [
