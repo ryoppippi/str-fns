@@ -44,7 +44,7 @@
 		"@typescript-eslint/parser": "^6.4.0",
 		"@vitest/browser": "^0.34.2",
 		"@vitest/coverage-v8": "^0.34.2",
-		"dts-buddy": "^0.1.12",
+		"dts-buddy": "^0.1.13",
 		"eslint": "^8.47.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-jsdoc": "^46.4.6",
