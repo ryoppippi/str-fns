@@ -54,10 +54,10 @@ devDependencies:
     version: 4.4.9(@types/node@20.5.1)
   vitest:
     specifier: ^0.34.2
-    version: 0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.4)
+    version: 0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.6)
   webdriverio:
-    specifier: ^8.15.4
-    version: 8.15.4(typescript@5.1.6)
+    specifier: ^8.15.6
+    version: 8.15.6(typescript@5.1.6)
 
 packages:
 
@@ -740,7 +740,7 @@ packages:
       magic-string: 0.30.2
       modern-node-polyfills: 0.1.3(rollup@2.79.1)
       sirv: 2.0.3
-      vitest: 0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.4)
+      vitest: 0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.6)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -761,7 +761,7 @@ packages:
       std-env: 3.4.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.1.0
-      vitest: 0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.4)
+      vitest: 0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.6)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -804,13 +804,13 @@ packages:
       pretty-format: 29.6.2
     dev: true
 
-  /@wdio/config@8.15.4:
-    resolution: {integrity: sha512-zCiztDJUVELPEJm6p5jD0ze3noyhABR6I7nSJiiT5RZgYbbQ5lhE7tC38VKfiSL9HgDFoItH0wA3uMq0AYDG+g==}
+  /@wdio/config@8.15.6:
+    resolution: {integrity: sha512-SWUoky6FrhBpcTtKOYLP2d9Sknw71W9A7ih5NuhL9joJZ8BfFQrwJxZ6b/O8zTTuUU5OikFBWFqNKx2XmJlKtw==}
     engines: {node: ^16.13 || >=18}
     dependencies:
       '@wdio/logger': 8.11.0
       '@wdio/types': 8.15.0
-      '@wdio/utils': 8.15.4
+      '@wdio/utils': 8.15.6
       decamelize: 6.0.0
       deepmerge-ts: 5.1.0
       glob: 10.3.3
@@ -848,8 +848,8 @@ packages:
       '@types/node': 20.5.1
     dev: true
 
-  /@wdio/utils@8.15.4:
-    resolution: {integrity: sha512-dYiiSmIR0drNoTDy6zQZanBAG/69PiBRFQsZiF56E+IJ9ikt0Oc88btNBwQP8jOI96q2qNwDlc46Lihei8xPxQ==}
+  /@wdio/utils@8.15.6:
+    resolution: {integrity: sha512-oC6iqlVQwtyUyjq3erEn599l/VS0FLE/2a0LMeRooteq8Za+LlXJCDU2kvh5Q4wxk9qrq45OFjlA3a3CmCUoPg==}
     engines: {node: ^16.13 || >=18}
     dependencies:
       '@puppeteer/browsers': 1.7.0
@@ -4457,7 +4457,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest@0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.4):
+  /vitest@0.34.2(@vitest/browser@0.34.2)(webdriverio@8.15.6):
     resolution: {integrity: sha512-WgaIvBbjsSYMq/oiMlXUI7KflELmzM43BEvkdC/8b5CAod4ryAiY2z8uR6Crbi5Pjnu5oOmhKa9sy7uk6paBxQ==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -4512,7 +4512,7 @@ packages:
       tinypool: 0.7.0
       vite: 4.4.9(@types/node@20.5.1)
       vite-node: 0.34.2(@types/node@20.5.1)
-      webdriverio: 8.15.4(typescript@5.1.6)
+      webdriverio: 8.15.6(typescript@5.1.6)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
@@ -4541,17 +4541,17 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /webdriver@8.15.4:
-    resolution: {integrity: sha512-9fbha7DJeMX7amb/TYtSjpQ2AAsUa7+auI8Riwu0vuP1tm5zEqQvm+xl25TPNiPtmwPHxfn4aZlQvJ589NnWkw==}
+  /webdriver@8.15.6:
+    resolution: {integrity: sha512-TpSb0+L6NlFnjFu02/BegO3g3suAw25eorWvNdmXRxPYMf5K6zAVYjpU3rD0GJ37R119dcsHWEKvEQ8ElrGnOw==}
     engines: {node: ^16.13 || >=18}
     dependencies:
       '@types/node': 20.5.1
       '@types/ws': 8.5.5
-      '@wdio/config': 8.15.4
+      '@wdio/config': 8.15.6
       '@wdio/logger': 8.11.0
       '@wdio/protocols': 8.14.6
       '@wdio/types': 8.15.0
-      '@wdio/utils': 8.15.4
+      '@wdio/utils': 8.15.6
       deepmerge-ts: 5.1.0
       got: 12.6.1
       ky: 0.33.3
@@ -4562,8 +4562,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /webdriverio@8.15.4(typescript@5.1.6):
-    resolution: {integrity: sha512-UkZI2ampTsBzTC+mDu8kZwUd7hKVML/zNhFk2EUyE9HaDXY6GHuVkzT2vU++3IXHbMUhRZTSy7IRaMlG8EAmNA==}
+  /webdriverio@8.15.6(typescript@5.1.6):
+    resolution: {integrity: sha512-00jIqucMOFWxpyQ/hoyj73m5qXAo+nBZc6Wpqg44SQYa9FuryMk8ejT3qHvTV5hxwDiNWKuAoKpxwD1N/aD4DQ==}
     engines: {node: ^16.13 || >=18}
     peerDependencies:
       devtools: ^8.14.0
@@ -4572,12 +4572,12 @@ packages:
         optional: true
     dependencies:
       '@types/node': 20.5.1
-      '@wdio/config': 8.15.4
+      '@wdio/config': 8.15.6
       '@wdio/logger': 8.11.0
       '@wdio/protocols': 8.14.6
       '@wdio/repl': 8.10.1
       '@wdio/types': 8.15.0
-      '@wdio/utils': 8.15.4
+      '@wdio/utils': 8.15.6
       archiver: 5.3.2
       aria-query: 5.3.0
       css-shorthand-properties: 1.1.1
@@ -4594,7 +4594,7 @@ packages:
       resq: 1.11.0
       rgb2hex: 0.2.5
       serialize-error: 11.0.1
-      webdriver: 8.15.4
+      webdriver: 8.15.6
     transitivePeerDependencies:
       - bufferutil
       - encoding
