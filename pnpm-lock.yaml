@@ -17,7 +17,7 @@ devDependencies:
     specifier: ^6.4.1
     version: 6.4.1(eslint@8.48.0)(typescript@5.2.2)
   '@vitest/browser':
-    specifier: ^0.34.2
+    specifier: ^0.34.3
     version: 0.34.3(rollup@2.79.1)(vitest@0.34.3)
   '@vitest/coverage-v8':
     specifier: ^0.34.2
