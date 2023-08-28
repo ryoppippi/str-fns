@@ -20,7 +20,7 @@ devDependencies:
     specifier: ^0.34.3
     version: 0.34.3(rollup@2.79.1)(vitest@0.34.3)
   '@vitest/coverage-v8':
-    specifier: ^0.34.2
+    specifier: ^0.34.3
     version: 0.34.3(vitest@0.34.3)
   dts-buddy:
     specifier: ^0.1.14
