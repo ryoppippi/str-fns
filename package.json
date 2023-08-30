@@ -55,7 +55,7 @@
 		"typescript": "^5.2.2",
 		"vite": "^4.4.9",
 		"vitest": "^0.34.3",
-		"webdriverio": "^8.15.8"
+		"webdriverio": "^8.15.9"
 	},
 	"license": "MIT",
 	"volta": {
