@@ -23,7 +23,7 @@ devDependencies:
     specifier: ^0.34.3
     version: 0.34.3(vitest@0.34.3)
   dts-buddy:
-    specifier: ^0.2.1
+    specifier: ^0.2.3
     version: 0.2.4
   eslint:
     specifier: ^8.48.0
