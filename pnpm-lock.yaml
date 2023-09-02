@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^9.0.0
     version: 9.0.0(eslint@8.48.0)
   eslint-plugin-jsdoc:
-    specifier: ^46.5.0
-    version: 46.5.0(eslint@8.48.0)
+    specifier: ^46.5.1
+    version: 46.5.1(eslint@8.48.0)
   lint-staged:
     specifier: ^14.0.1
     version: 14.0.1
@@ -1856,8 +1856,8 @@ packages:
       eslint: 8.48.0
     dev: true
 
-  /eslint-plugin-jsdoc@46.5.0(eslint@8.48.0):
-    resolution: {integrity: sha512-aulXdA4I1dyWpzyS1Nh/GNoS6PavzeucxEapnMR4JUERowWvaEk2Y4A5irpHAcdXtBBHLVe8WIhdXNjoAlGQgA==}
+  /eslint-plugin-jsdoc@46.5.1(eslint@8.48.0):
+    resolution: {integrity: sha512-CPbvKprmEuJYoxMj5g8gXfPqUGgcqMM6jpH06Kp4pn5Uy5MrPkFKzoD7UFp2E4RBzfXbJz1+TeuEivwFVMkXBg==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
