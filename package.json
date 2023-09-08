@@ -14,10 +14,10 @@
 		"publint": "publint",
 		"test": "npm-run-all --parallel test:*",
 		"test:vitest": "vitest",
-		"test:typecheck": "pnpm run build && vitest typecheck",
+		"test:typecheck": "bun run build && vitest typecheck",
 		"coverage": "vitest run --coverage",
 		"prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
-		"prepublishOnly": "pnpm run build && npm-run-all lint publint 'test:* -- --run'"
+		"prepublishOnly": "bun run build && npm-run-all lint publint 'test:* -- --run'"
 	},
 	"files": [
 		"src",
@@ -63,18 +63,18 @@
 		"pnpm": "8.7.3"
 	},
 	"engines": {
-		"npm": "use pnpm please!",
-		"yarn": "use pnpm please!",
-		"pnpm": ">=8.7.3"
+		"npm": "use bun please!",
+		"yarn": "use bun please!",
+		"pnpm": "use bun please!"
 	},
 	"lint-staged": {
 		"src/*.{js,ts,json}": [
-			"pnpm format",
-			"pnpm lint"
+			"bun run format",
+			"bun run lint"
 		],
 		"src/**/*.{js,ts}": [
-			"pnpm test:vitest --run",
-			"pnpm test:typecheck --run"
+			"bun run test:vitest --run",
+			"bun run test:typecheck --run"
 		]
 	}
 }
