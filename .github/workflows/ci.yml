@@ -15,38 +15,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Launch Turbo Remote Cache Server
-        uses: dtinth/setup-github-actions-caching-for-turbo@v1.1.0
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: package.json
-          cache: 'pnpm'
+      - uses: oven-sh/setup-bun@v1
 
       - uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/bun.lockb') }}
 
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: bun install
 
       - name: Run lint
-        run: pnpm lint
+        run: bun run lint
 
       - name: Run test
-        run: pnpm test
+        run: bun run test
 
       - name: Generate coverage
-        run: pnpm vitest --coverage
+        run: bun run vitest --coverage
 
       - name: Report coverage
         if: always()
