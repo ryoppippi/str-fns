@@ -60,7 +60,7 @@
 	"license": "MIT",
 	"volta": {
 		"node": "18.17.1",
-		"pnpm": "8.7.3"
+		"pnpm": "8.7.4"
 	},
 	"engines": {
 		"npm": "use bun please!",
