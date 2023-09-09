@@ -58,10 +58,6 @@
 		"webdriverio": "^8.16.4"
 	},
 	"license": "MIT",
-	"volta": {
-		"node": "18.17.1",
-		"pnpm": "8.7.4"
-	},
 	"engines": {
 		"npm": "use bun please!",
 		"yarn": "use bun please!",
