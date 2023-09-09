@@ -17,13 +17,6 @@ jobs:
 
       - uses: oven-sh/setup-bun@v1
 
-      - uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: '~/.bun/install/cache'
-          key: ${{ runner.os }}-bun-${{ env.cache-name }}
-
       - name: Install dependencies
         run: bun install
 
