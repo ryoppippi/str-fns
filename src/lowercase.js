@@ -27,33 +27,3 @@
 export function lowercase(input) {
 	return /** @type {LowercaseString<T>} */ (input.toLowerCase());
 }
-
-if (import.meta.vitest != null) {
-	const { describe, it, expect } = import.meta.vitest;
-	describe('lowercase test', () => {
-		it('should lowercase one letter', () => {
-			const before = /** @type {const} */ ('A');
-			const lowercased = lowercase(before);
-			const expected = /** @satisfies {typeof lowercased} */ ('a');
-			expect(lowercased).toBe(expected);
-		});
-		it('should lowercase a word', () => {
-			const before = /** @type {const} */ ('hEllO');
-			const lowercased = lowercase(before);
-			const expected = /** @satisfies {typeof lowercased} */ ('hello');
-			expect(lowercased).toBe(expected);
-		});
-		it('should lowercase a sentence', () => {
-			const before = /** @type {const} */ ('hellO wOrld');
-			const lowercased = lowercase(before);
-			const expected = /** @satisfies {typeof lowercased} */ ('hello world');
-			expect(lowercased).toBe(expected);
-		});
-		it('should lowercase empty string', () => {
-			const before = /** @type {const} */ ('');
-			const lowercased = lowercase(before);
-			const expected = /** @satisfies {typeof lowercased} */ ('');
-			expect(lowercased).toBe(expected);
-		});
-	});
-}

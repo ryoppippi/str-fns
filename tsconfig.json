@@ -17,7 +17,7 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
-		"types": ["./types", "vitest/importMeta", "bun-types"]
+		"types": ["bun-types"]
 	},
 	"include": ["src", "types"],
 	"exclude": ["node_modules"]

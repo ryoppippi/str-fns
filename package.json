@@ -12,12 +12,10 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"publint": "publint",
-		"test": "npm-run-all --parallel test:*",
-		"test:vitest": "vitest",
-		"test:typecheck": "bun run build && vitest typecheck",
-		"coverage": "vitest run --coverage",
+		"test": "bun test",
+		"typecheck": "bun x tsc --noEmit",
 		"prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
-		"prepublishOnly": "bun run build && npm-run-all lint publint 'test:* -- --run'"
+		"prepublishOnly": "bun run lint && bun run publint && bun run typecheck && bun run test && bun run build"
 	},
 	"files": [
 		"src",
@@ -42,8 +40,6 @@
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@typescript-eslint/parser": "^6.7.0",
-		"@vitest/browser": "^0.34.4",
-		"@vitest/coverage-v8": "^0.34.4",
 		"bun-types": "^1.0.2",
 		"dts-buddy": "^0.2.4",
 		"eslint": "^8.49.0",
@@ -52,9 +48,7 @@
 		"npm-run-all": "^4.1.5",
 		"prettier": "^3.0.3",
 		"publint": "^0.2.2",
-		"typescript": "^5.2.2",
-		"vite": "^4.4.9",
-		"vitest": "^0.34.4"
+		"typescript": "^5.2.2"
 	},
 	"license": "MIT",
 	"engines": {
@@ -66,10 +60,6 @@
 		"src/*.{js,ts,json}": [
 			"bun run format",
 			"bun run lint"
-		],
-		"src/**/*.{js,ts}": [
-			"bun run test:vitest --run",
-			"bun run test:typecheck --run"
 		]
 	}
 }

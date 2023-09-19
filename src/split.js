@@ -35,33 +35,3 @@
 export function split(input, separator) {
 	return /** @type {SplitString<T,U>} */ input.split(separator);
 }
-
-if (import.meta.vitest != null) {
-	const { describe, it, expect } = import.meta.vitest;
-	describe('split test', () => {
-		it('should split a string into an array', () => {
-			const before = /** @type {const} */ ('abc');
-			const splitted = split(before, '');
-			const expected = /** @satisfies {typeof splitted} */ (['a', 'b', 'c']);
-			expect(splitted).toEqual(expected);
-		});
-		it('should split a string into an array', () => {
-			const before = /** @type {const} */ ('a-b-c');
-			const splitted = split(before, '-');
-			const expected = /** @satisfies {typeof splitted} */ (['a', 'b', 'c']);
-			expect(splitted).toEqual(expected);
-		});
-		it('should split a string into an array', () => {
-			const before = /** @type {const} */ ('a-b-c');
-			const splitted = split(before, '');
-			const expected = /** @satisfies {typeof splitted} */ (['a', '-', 'b', '-', 'c']);
-			expect(splitted).toEqual(expected);
-		});
-		it('should split a string into an array', () => {
-			const before = /** @type {const} */ ('a-b-c');
-			const splitted = split(before, '$');
-			const expected = /** @satisfies {typeof splitted} */ (['a-b-c']);
-			expect(splitted).toEqual(expected);
-		});
-	});
-}
