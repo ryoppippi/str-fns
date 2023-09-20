@@ -5,5 +5,7 @@ files=$(git diff --cached --name-only --diff-filter=ACM)
 
 git stash -k
 bun x lint-staged
+bun test
+bun run typecheck
 git add $files
 git stash pop
