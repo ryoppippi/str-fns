@@ -12,13 +12,7 @@
 			"recommended": true
 		}
 	},
-	"javascript": {
-		"formatter": {
-			"semicolons": "always",
-			"quoteStyle": "single"
-		}
-	},
 	"files": {
-		"ignore": ["dist"]
+		"ignore": ["types"]
 	}
 }

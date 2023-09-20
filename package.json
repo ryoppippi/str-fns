@@ -9,25 +9,16 @@
 	"types": "./types/index.d.ts",
 	"scripts": {
 		"build": "bun run scripts/build.ts && bun x trash ./types/index.js",
-		"format": "biome format src --write",
-		"lint": "biome check src",
+		"format": "biome format . --write",
+		"lint": "biome check .",
 		"publint": "publint",
 		"test": "bun test",
 		"typecheck": "bun x tsc --noEmit",
 		"prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
 		"prepublishOnly": "bun run lint && bun run publint && bun run typecheck && bun run test && bun run build"
 	},
-	"files": [
-		"src",
-		"types"
-	],
-	"keywords": [
-		"string",
-		"functions",
-		"utils",
-		"typescript",
-		"typesafe"
-	],
+	"files": ["src", "types"],
+	"keywords": ["string", "functions", "utils", "typescript", "typesafe"],
 	"exports": {
 		".": {
 			"types": "./types/index.d.ts",
@@ -48,9 +39,6 @@
 	"license": "MIT",
 	"engines": {},
 	"lint-staged": {
-		"src/*.{js,ts,json}": [
-			"bun run format",
-			"bun run lint"
-		]
+		"src/*.{js,ts,json}": ["bun run format", "bun run lint"]
 	}
 }
