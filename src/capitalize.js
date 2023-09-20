@@ -26,5 +26,7 @@
  */
 export function capitalize(input) {
 	const [first, ...rest] = input;
-	return /** @type {CapitalizedString<T>} */ ([first?.toUpperCase(), ...rest].join(''));
+	return /** @type {CapitalizedString<T>} */ (
+		[first?.toUpperCase(), ...rest].join('')
+	);
 }
