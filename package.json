@@ -8,7 +8,7 @@
 	"main": "src/index.js",
 	"types": "./types/index.d.ts",
 	"scripts": {
-		"build": "bun run scripts/build.ts && bun x trash ./types/index.js",
+		"build": "bun run scripts/build.ts",
 		"format": "biome format . --write",
 		"lint": "biome check .",
 		"publint": "publint",
