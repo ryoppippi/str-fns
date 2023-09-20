@@ -8,7 +8,7 @@
 	"main": "src/index.js",
 	"types": "./types/index.d.ts",
 	"scripts": {
-		"build": "dts-buddy",
+		"build": "bun run scripts/build.ts && bun x trash ./types/index.js",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"publint": "publint",
@@ -40,8 +40,8 @@
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
 		"@typescript-eslint/parser": "^6.7.0",
+		"bun-plugin-dts": "https://github.com/ryoppippi/bun-plugin-dts",
 		"bun-types": "^1.0.2",
-		"dts-buddy": "^0.2.4",
 		"eslint": "^8.49.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-jsdoc": "^46.8.1",
@@ -51,11 +51,7 @@
 		"typescript": "^5.2.2"
 	},
 	"license": "MIT",
-	"engines": {
-		"npm": "use bun please!",
-		"yarn": "use bun please!",
-		"pnpm": "use bun please!"
-	},
+	"engines": {},
 	"lint-staged": {
 		"src/*.{js,ts,json}": [
 			"bun run format",
