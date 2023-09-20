@@ -4,7 +4,8 @@
 files=$(git diff --cached --name-only --diff-filter=ACM)
 
 git stash -k
-bun x lint-staged
+bun run format
+bun run lint
 bun test
 bun run typecheck
 git add $files

@@ -27,6 +27,6 @@
 export function uncapitalize(input) {
 	const [first, ...rest] = input;
 	return /** @type {UncapitalizedString<T>} */ (
-		[first?.toLowerCase(), ...rest].join('')
+		[first?.toLowerCase(), ...rest].join("")
 	);
 }
