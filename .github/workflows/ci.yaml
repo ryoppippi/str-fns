@@ -31,3 +31,11 @@ jobs:
 
       - name: Run typecheck
         run: bun run typecheck
+
+  action-timeline:
+    needs: 
+      - ci
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Kesin11/actions-timeline@v1
