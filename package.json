@@ -8,7 +8,7 @@
   "main": "src/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
-    "build": "bun run scripts/build.ts",
+    "build": "dts-buddy",
     "format": "biome format . --write",
     "lint": "biome check .",
     "publint": "publint",
@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
-    "bun-plugin-dts": "^0.2.1",
     "bun-types": "^1.0.3",
+    "dts-buddy": "^0.2.5",
     "publint": "^0.2.2",
     "typescript": "^5.2.2"
   },
