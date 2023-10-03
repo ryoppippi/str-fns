@@ -26,7 +26,7 @@
     }
   },
   "dependencies": {
-    "type-fest": "^4.3.2"
+    "type-fest": "^4.3.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
