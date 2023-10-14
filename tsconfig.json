@@ -17,6 +17,8 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
+		"sourceMap": true,
+		"declarationMap": true,
 		"types": ["bun-types"]
 	},
 	"include": ["src"],
