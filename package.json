@@ -1,44 +1,44 @@
 {
-  "name": "str-fns",
-  "description": "a collection of string functions",
-  "version": "0.0.10",
-  "author": "@ryoppippi",
-  "repository": "ryoppippi/str-fns",
-  "type": "module",
-  "main": "src/index.js",
-  "types": "./types/index.d.ts",
-  "scripts": {
-    "build": "bun run scripts/build.ts",
-    "format": "biome format . --write",
-    "lint": "biome check .",
-    "publint": "publint",
-    "test": "bun test",
-    "typecheck": "bun x tsc --noEmit",
-    "prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
-    "prepublishOnly": "bun run lint && bun run publint && bun run typecheck && bun run test && bun run build"
-  },
-  "files": ["src", "types"],
-  "keywords": ["string", "functions", "utils", "typescript", "typesafe"],
-  "exports": {
-    ".": {
-      "types": "./types/index.d.ts",
-      "import": "./src/index.js"
-    }
-  },
-  "dependencies": {
-    "type-fest": "^4.4.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.2.2",
-    "bun-plugin-dts": "^0.2.1",
-    "bun-types": "^1.0.4",
-    "publint": "^0.2.4",
-    "typescript": "^5.2.2"
-  },
-  "license": "MIT",
-  "engines": {
-    "npm": "use bun please!",
-    "yarn": "use bun please!",
-    "pnpm": "use bun please!"
-  }
+	"name": "str-fns",
+	"description": "a collection of string functions",
+	"version": "0.0.10",
+	"author": "@ryoppippi",
+	"repository": "ryoppippi/str-fns",
+	"type": "module",
+	"main": "src/index.js",
+	"types": "./types/index.d.ts",
+	"scripts": {
+		"build": "tsc src/index.js --allowJs --declaration --sourceMap --declarationMap --emitDeclarationOnly --outDir types",
+		"format": "biome format . --write",
+		"lint": "biome check .",
+		"publint": "publint",
+		"test": "bun test",
+		"typecheck": "tsc --noEmit",
+		"prepare": "git config --local core.hooksPath .githooks || echo 'Can not set git hooks'",
+		"prepublishOnly": "npm run lint && npm run publint && npm run typecheck && npm run test && npm run build"
+	},
+	"files": ["src", "types"],
+	"keywords": ["string", "functions", "utils", "typescript", "typesafe"],
+	"exports": {
+		".": {
+			"types": "./types/index.d.ts",
+			"import": "./src/index.js"
+		}
+	},
+	"dependencies": {
+		"type-fest": "^4.4.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.2.2",
+		"@types/node": "^20.8.6",
+		"bun-types": "^1.0.4",
+		"publint": "^0.2.4",
+		"typescript": "^5.2.2"
+	},
+	"license": "MIT",
+	"engines": {
+		"npm": "use bun please!",
+		"yarn": "use bun please!",
+		"pnpm": "use bun please!"
+	}
 }
