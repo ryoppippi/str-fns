@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
+		"lib": ["ES2020", "DOM"],
 		"useDefineForClassFields": true,
 		"module": "ESNext",
 		"skipLibCheck": true,
@@ -18,8 +19,7 @@
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
 		"sourceMap": true,
-		"declarationMap": true,
-		"types": ["bun-types"]
+		"types": ["bun-types", "@types/node"]
 	},
 	"include": ["src"],
 	"exclude": ["node_modules"]
