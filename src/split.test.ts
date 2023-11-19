@@ -1,5 +1,5 @@
-import { split } from "./split.js";
 import { expect, test } from "bun:test";
+import { split } from "./split.js";
 
 test("should split a string into an array", () => {
 	const before = "abc" as const;

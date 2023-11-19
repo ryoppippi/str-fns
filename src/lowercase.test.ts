@@ -1,5 +1,5 @@
-import { lowercase } from "./lowercase.js";
 import { expect, test } from "bun:test";
+import { lowercase } from "./lowercase.js";
 
 test("should lowercase one letter", () => {
 	const before = "A" as const;

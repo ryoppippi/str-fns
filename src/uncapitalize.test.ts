@@ -1,5 +1,5 @@
-import { uncapitalize } from "./uncapitalize.js";
 import { expect, test } from "bun:test";
+import { uncapitalize } from "./uncapitalize.js";
 
 test("should uncapitalize one letter", () => {
 	const before = "A" as const;
