@@ -29,7 +29,7 @@
 		"type-fest": "^4.9.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.4.1",
+		"@biomejs/biome": "^1.5.0",
 		"@types/node": "^20.10.7",
 		"bun-types": "^1.0.10",
 		"publint": "^0.2.7",
