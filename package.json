@@ -8,7 +8,7 @@
 	"main": "src/index.js",
 	"types": "./types/index.d.ts",
 	"scripts": {
-		"build": "tsc src/index.js --allowJs --declaration --sourceMap --declarationMap --emitDeclarationOnly --outDir types",
+		"build": "tsc src/index.ts --allowJs --declaration --sourceMap --declarationMap --emitDeclarationOnly --outDir types",
 		"format": "biome format . --write",
 		"lint": "biome check .",
 		"publint": "publint",
