@@ -3,7 +3,7 @@
 /**
  * @template {Readonly<string>} T
  * @template {Readonly<string>} U
- * @typedef {import('type-fest').IsStringLiteral<T> extends true ? import('type-fest').Split<T,U> : string[]} SplitString<T,U>
+ * @typedef {import('type-fest').IsStringLiteral<T> extends true ? Readonly<import('type-fest').Split<T,U>> : readonly string[]} SplitString<T,U>
  */
 
 /**
