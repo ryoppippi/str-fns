@@ -5,10 +5,8 @@
 	"author": "@ryoppippi",
 	"repository": "ryoppippi/str-fns",
 	"type": "module",
-	"main": "src/index.js",
-	"types": "./types/index.d.ts",
+	"main": "src/index.ts",
 	"scripts": {
-		"build": "tsc src/index.ts --allowJs --declaration --sourceMap --declarationMap --emitDeclarationOnly --outDir types",
 		"format": "biome format . --write",
 		"lint": "biome check .",
 		"publint": "publint",
@@ -21,8 +19,7 @@
 	"keywords": ["string", "functions", "utils", "typescript", "typesafe"],
 	"exports": {
 		".": {
-			"types": "./types/index.d.ts",
-			"import": "./src/index.js"
+			"import": "./src/index.ts"
 		}
 	},
 	"dependencies": {
