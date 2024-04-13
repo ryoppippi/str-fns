@@ -7,6 +7,7 @@
 [![JSR](https://jsr.io/badges/@ryoppippi/str-fns)](https://jsr.io/@ryoppippi/str-fns)
 
 
+
 A collection of type-safe string functions written in pure JavaScript + JSDoc.
 
 ## Why str-fns
