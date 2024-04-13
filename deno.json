@@ -7,7 +7,9 @@
 	"exports": "./src/index.ts",
 	"importMap": "./import_map.json",
 	"tasks": {
-		"dev": "deno run --watch main.ts"
+		"dev": "deno run --watch ./src/index.ts",
+		"test": "deno test --coverage=coverage src/*",
+		"show-coverage": "deno coverage coverage"
 	},
 	"keywords": [
 		"string",

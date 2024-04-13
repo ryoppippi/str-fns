@@ -1,7 +1,10 @@
 import type { IsStringLiteral } from "type-fest";
 
+import { assertEquals } from "assert";
+import type { AssertTrue, IsExact } from "type-testing";
+
 type UncapitalizedString<T extends Readonly<string>> =
-	IsStringLiteral<T> extends true ? Uncapitalize<T> : string;
+  IsStringLiteral<T> extends true ? Uncapitalize<T> : string;
 
 /**
  * @description uncapitalize first letter of string
@@ -16,11 +19,42 @@ type UncapitalizedString<T extends Readonly<string>> =
  *
  * @example
  * uncapitalize('') // returns ''
- *
  */
 export function uncapitalize<T extends Readonly<string>>(
-	input: T,
+  input: T,
 ): UncapitalizedString<T> {
-	const [first, ...rest] = input;
-	return [first?.toLowerCase(), ...rest].join("");
+  const [first, ...rest] = input;
+  return [first?.toLowerCase(), ...rest].join("");
 }
+
+Deno.test("should uncapitalize one letter", () => {
+  const before = "A" as const;
+  const uncapitalized = uncapitalize(before);
+  const expected = "a" as const;
+  assertEquals(uncapitalized, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof uncapitalized>>;
+});
+
+Deno.test("should uncapitalize a word", () => {
+  const before = "Hello" as const;
+  const uncapitalized = uncapitalize(before);
+  const expected = "hello" as const;
+  assertEquals(uncapitalized, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof uncapitalized>>;
+});
+
+Deno.test("should uncapitalize a sentence", () => {
+  const before = "Hello World" as const;
+  const uncapitalized = uncapitalize(before);
+  const expected = "hello World" as const;
+  assertEquals(uncapitalized, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof uncapitalized>>;
+});
+
+Deno.test("should uncapitalize empty string", () => {
+  const before = "" as const;
+  const uncapitalized = uncapitalize(before);
+  const expected = "" as const;
+  assertEquals(uncapitalized, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof uncapitalized>>;
+});
