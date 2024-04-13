@@ -1,21 +1,21 @@
 {
-	"name": "@ryoppippi/str-fns",
-	"version": "0.0.10",
-	"author": "@ryoppippi",
-	"repository": "ryoppippi/str-fns",
-	"license": "MIT",
-	"exports": "./src/index.ts",
-	"importMap": "./import_map.json",
-	"tasks": {
-		"dev": "deno run --watch ./src/index.ts",
-		"test": "deno test --coverage=coverage src/*",
-		"show-coverage": "deno coverage coverage"
-	},
-	"keywords": [
-		"string",
-		"functions",
-		"utils",
-		"typescript",
-		"typesafe"
-	]
+  "name": "@ryoppippi/str-fns",
+  "version": "0.0.10",
+  "author": "@ryoppippi",
+  "repository": "ryoppippi/str-fns",
+  "license": "MIT",
+  "exports": "./src/index.ts",
+  "importMap": "./import_map.json",
+  "tasks": {
+    "dev": "deno run --watch ./src/index.ts",
+    "test": "deno test --coverage=coverage src/*",
+    "show-coverage": "deno coverage coverage"
+  },
+  "keywords": [
+    "string",
+    "functions",
+    "utils",
+    "typescript",
+    "typesafe"
+  ]
 }

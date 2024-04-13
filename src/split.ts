@@ -66,4 +66,3 @@ Deno.test("should split a string into an array", () => {
   assertEquals(splitted, expected);
   type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
 });
-
