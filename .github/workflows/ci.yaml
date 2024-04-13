@@ -9,22 +9,40 @@ permissions:
   pull-requests: write
 
 jobs:
-  ci:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
-
+      - run: deno lint 
       - name: Test
         run: |
-          deno task test
+          deno lint
+          deno fmt --check
+          deno task check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+      - run: |
+          deno task test:coverage
           deno task show-coverage
+
+  jsr-publish-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+      - run: deno publish --dry-run
+
 
   action-timeline:
     needs: 
-      - ci
+      - test
+      - check
+      - jsr-publish-dry-run
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
