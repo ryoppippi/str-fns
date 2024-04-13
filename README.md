@@ -1,7 +1,11 @@
 # str-fns
 
+[![.github/workflows/ci.yaml](https://github.com/ryoppippi/str-fns/actions/workflows/ci.yaml/badge.svg)](https://github.com/ryoppippi/str-fns/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/ryoppippi/str-fns/graph/badge.svg?token=UZW583YFXB)](https://codecov.io/gh/ryoppippi/str-fns)
+[![JSR Score](https://jsr.io/badges/@ryoppippi/str-fns/score)](https://jsr.io/@ryoppippi/str-fns)  
 [![npm version](https://badgen.net/npm/v/str-fns)](https://www.npmjs.com/package/str-fns)
-[![.github/workflows/ci.yml](https://github.com/ryoppippi/str-fns/actions/workflows/ci.yml/badge.svg)](https://github.com/ryoppippi/str-fns/actions/workflows/ci.yml)
+[![JSR](https://jsr.io/badges/@ryoppippi/str-fns)](https://jsr.io/@ryoppippi/str-fns)
+
 
 A collection of type-safe string functions written in pure JavaScript + JSDoc.
 
