@@ -8,8 +8,11 @@
   "importMap": "./import_map.json",
   "tasks": {
     "dev": "deno run --watch ./src/index.ts",
-    "test": "deno test --coverage=coverage src/*",
-    "show-coverage": "deno coverage coverage"
+    "check": "deno check ./src/*",
+    "test": "deno test --parallel --doc",
+    "test:coverage": "deno task test --coverage=coverage src/*",
+    "coverage:show": "deno coverage ./coverage",
+    "coverage:lco": "deno coverage --lcov ./coverage > ./coverage/lcov.info"
   },
   "keywords": [
     "string",

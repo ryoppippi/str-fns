@@ -9,22 +9,39 @@ permissions:
   pull-requests: write
 
 jobs:
-  ci:
+  check-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
-
+      - run: deno lint 
       - name: Test
         run: |
-          deno task test
-          deno task show-coverage
+          deno lint
+          deno fmt --check
+          deno task check
+          deno task test:coverage
+          deno task coverage:lco
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          file: ./coverage.lcov
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: ryoppippi/str-fns
+
+  jsr-publish-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+      - run: deno publish --dry-run
+
 
   action-timeline:
     needs: 
-      - ci
+      - check-test
+      - jsr-publish-dry-run
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
