@@ -1,7 +1,7 @@
 {
   "imports": {
     "type-fest": "npm:type-fest@4.15.0",
-    "assert": "https://deno.land/std@0.222.1/assert/mod.ts",
-    "type-testing": "https://deno.land/std@0.222.1/testing/types.ts"
+    "assert": "jsr:@std/assert@0.222.1",
+    "type-testing": "jsr:@std/testing@0.222.1/types"
   }
 }

@@ -2,7 +2,24 @@
   "version": "3",
   "packages": {
     "specifiers": {
+      "jsr:@std/assert@0.222.1": "jsr:@std/assert@0.222.1",
+      "jsr:@std/fmt@^0.222.1": "jsr:@std/fmt@0.222.1",
+      "jsr:@std/testing@0.222.1": "jsr:@std/testing@0.222.1",
       "npm:type-fest@4.15.0": "npm:type-fest@4.15.0"
+    },
+    "jsr": {
+      "@std/assert@0.222.1": {
+        "integrity": "691637161ee584a9919d1f9950ddd1272feb8e0a19e83aa5b7563cedaf73d74c",
+        "dependencies": [
+          "jsr:@std/fmt@^0.222.1"
+        ]
+      },
+      "@std/fmt@0.222.1": {
+        "integrity": "ec3382f9b0261c1ab1a5c804aa355d816515fa984cdd827ed32edfb187c0a722"
+      },
+      "@std/testing@0.222.1": {
+        "integrity": "7be5c3ef185d31883116824a2dd604eb6f12a56fd5ed80489c7c696b2a76c5bc"
+      }
     },
     "npm": {
       "type-fest@4.15.0": {
