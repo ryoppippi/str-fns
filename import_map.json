@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "type-fest": "npm:type-fest@4.15.0"
+  }
+}

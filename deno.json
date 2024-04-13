@@ -1,0 +1,19 @@
+{
+	"name": "@ryoppippi/str-fns",
+	"version": "0.0.10",
+	"author": "@ryoppippi",
+	"repository": "ryoppippi/str-fns",
+	"license": "MIT",
+	"exports": "./src/index.ts",
+	"importMap": "./import_map.json",
+	"tasks": {
+		"dev": "deno run --watch main.ts"
+	},
+	"keywords": [
+		"string",
+		"functions",
+		"utils",
+		"typescript",
+		"typesafe"
+	]
+}
