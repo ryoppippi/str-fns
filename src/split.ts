@@ -1,11 +1,13 @@
 import type { IsStringLiteral, Split } from "type-fest";
 
+import { assertEquals } from "assert";
+import type { AssertTrue, IsExact } from "type-testing";
+
 type SplitString<
-	T extends Readonly<string>,
-	U extends Readonly<string>,
-> = IsStringLiteral<T> extends true
-	? Readonly<Split<T, U>>
-	: Readonly<string[]>;
+  T extends Readonly<string>,
+  U extends Readonly<string>,
+> = IsStringLiteral<T> extends true ? Readonly<Split<T, U>>
+  : Readonly<string[]>;
 
 /**
  * @description Split string by separator
@@ -25,11 +27,43 @@ type SplitString<
  *
  * @example
  * split('a-b-c', '$') // returns ['a-b-c']
- *
  */
 export function split<T extends Readonly<string>, U extends Readonly<string>>(
-	input: T,
-	separator: U,
+  input: T,
+  separator: U,
 ): SplitString<T, U> {
-	return input.split(separator);
+  return input.split(separator);
 }
+
+Deno.test("should split a string into an array", () => {
+  const before = "abc" as const;
+  const splitted = split(before, "");
+  const expected = ["a", "b", "c"] as const;
+  assertEquals(splitted, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
+});
+
+Deno.test("should split a string into an array", () => {
+  const before = "a-b-c" as const;
+  const splitted = split(before, "-");
+  const expected = ["a", "b", "c"] as const;
+  assertEquals(splitted, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
+});
+
+Deno.test("should split a string into an array", () => {
+  const before = "a-b-c" as const;
+  const splitted = split(before, "");
+  const expected = ["a", "-", "b", "-", "c"] as const;
+  assertEquals(splitted, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
+});
+
+Deno.test("should split a string into an array", () => {
+  const before = "a-b-c" as const;
+  const splitted = split(before, "$");
+  const expected = ["a-b-c"] as const;
+  assertEquals(splitted, expected);
+  type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
+});
+

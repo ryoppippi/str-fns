@@ -1,7 +1,5 @@
-// @ts-strict
-
-export * from "./capitalize.js";
-export * from "./uncapitalize.js";
-export * from "./lowercase.js";
-export * from "./uppercase.js";
-export * from "./split.js";
+export * from "./capitalize.ts";
+export * from "./uncapitalize.ts";
+export * from "./lowercase.ts";
+export * from "./uppercase.ts";
+export * from "./split.ts";
