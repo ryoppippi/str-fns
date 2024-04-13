@@ -9,8 +9,8 @@
   "tasks": {
     "dev": "deno run --watch ./src/index.ts",
     "check": "deno check ./src/*",
-    "test": "deno test --parallel --doc",
-    "test:coverage": "deno task test --coverage=coverage src/*",
+    "test": "deno test src/* --parallel --doc ",
+    "test:coverage": "deno task test --coverage=coverage",
     "coverage:show": "deno coverage ./coverage",
     "coverage:lco": "deno coverage --lcov ./coverage > ./coverage/lcov.info"
   },
