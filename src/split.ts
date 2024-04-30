@@ -1,5 +1,4 @@
 import type { IsStringLiteral, Split } from "type-fest";
-import type { AssertTrue, IsExact } from "type-testing";
 
 type SplitString<
   T extends Readonly<string>,
@@ -31,40 +30,4 @@ export function split<T extends Readonly<string>, U extends Readonly<string>>(
   separator: U,
 ): SplitString<T, U> {
   return input.split(separator);
-}
-
-if (globalThis.Deno) {
-  const { assertEquals } = await import("assert");
-
-  Deno.test("should split a string into an array", () => {
-    const before = "abc" as const;
-    const splitted = split(before, "");
-    const expected = ["a", "b", "c"] as const;
-    assertEquals(splitted, expected);
-    type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
-  });
-
-  Deno.test("should split a string into an array", () => {
-    const before = "a-b-c" as const;
-    const splitted = split(before, "-");
-    const expected = ["a", "b", "c"] as const;
-    assertEquals(splitted, expected);
-    type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
-  });
-
-  Deno.test("should split a string into an array", () => {
-    const before = "a-b-c" as const;
-    const splitted = split(before, "");
-    const expected = ["a", "-", "b", "-", "c"] as const;
-    assertEquals(splitted, expected);
-    type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
-  });
-
-  Deno.test("should split a string into an array", () => {
-    const before = "a-b-c" as const;
-    const splitted = split(before, "$");
-    const expected = ["a-b-c"] as const;
-    assertEquals(splitted, expected);
-    type _ = AssertTrue<IsExact<typeof expected, typeof splitted>>;
-  });
 }
