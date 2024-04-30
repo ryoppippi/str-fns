@@ -66,5 +66,12 @@
     "https://deno.land/std@0.222.1/assert/unreachable.ts": "5ae3dbf63ef988615b93eb08d395dda771c96546565f9e521ed86f6510c29e19",
     "https://deno.land/std@0.222.1/fmt/colors.ts": "d239d84620b921ea520125d778947881f62c50e78deef2657073840b8af9559a",
     "https://deno.land/std@0.222.1/testing/types.ts": "36e519e8735884ce60ddd284195a28f6d22f83d3effe5df0ce27bafc17b5655d"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@0.222.1",
+      "jsr:@std/testing@0.222.1",
+      "npm:type-fest@4.15.0"
+    ]
   }
 }
