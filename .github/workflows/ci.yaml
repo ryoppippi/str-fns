@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+env:
+  DENO_VERSION: 1.x
+  NODE_VERSION: 20.x
+
 permissions:
   contents: read
   pull-requests: write
@@ -14,6 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
       - run: deno lint 
       - name: Test
         run: |
@@ -35,8 +41,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
       - run: deno publish --dry-run
 
+  npm-publish-dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: "https://registry.npmjs.org"
+      - run: deno task build-npm
+      - run: |
+          cd npm
+          npm publish --dry-run
 
   action-timeline:
     needs: 
