@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+env:
+  DENO_VERSION: 1.x
+
 permissions:
   contents: read
   pull-requests: write
@@ -14,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
       - run: deno lint 
       - name: Test
         run: |
@@ -35,6 +40,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
       - run: deno publish --dry-run
 
 
