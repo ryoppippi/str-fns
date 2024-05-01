@@ -4,14 +4,7 @@ type ConcatingLoop<
   T extends readonly string[],
   R extends string = "",
 > = [] extends T ? R
-  : TF.IsStringLiteral<R> extends true
-    ? T extends [infer A, ...infer B]
-      ? B extends readonly string[]
-        ? A extends string ? ConcatingLoop<B, `${R}${A}`>
-        : string
-      : string
-    : string
-  : string;
+  : ConcatingLoop<TF.ArraySlice<T, 0, -1>, `${TF.LastArrayElement<T>}${R}`>;
 
 type ConcatedString<T extends readonly string[]> = ConcatingLoop<T>;
 
@@ -23,6 +16,9 @@ type ConcatedString<T extends readonly string[]> = ConcatingLoop<T>;
  * const _: 'a' = concat('a');
  * const __: 'helloworld' = concat('hello', 'world');
  * const ___: 'hello world' = concat('hello', ' ', 'world');
+ *
+ * const random = Math.random();
+ * const _: `a${string}` = concat("a", random.tostring());
  * ```
  *
  * @param ...inputs - strings to concat
