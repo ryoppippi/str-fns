@@ -1,7 +1,7 @@
-import type { IsStringLiteral } from "type-fest";
+import type * as TF from "type-fest";
 
-type CapitalizedString<T extends Readonly<string>> = IsStringLiteral<T> extends
-  true ? Capitalize<T> : string;
+type CapitalizedString<T extends Readonly<string>> =
+  TF.IsStringLiteral<T> extends true ? Capitalize<T> : string;
 
 /**
  * capitalize first letter of string

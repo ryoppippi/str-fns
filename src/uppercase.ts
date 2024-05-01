@@ -1,6 +1,6 @@
-import type { IsStringLiteral } from "type-fest";
+import type * as TF from "type-fest";
 
-type UppercaseString<T extends Readonly<string>> = IsStringLiteral<T> extends
+type UppercaseString<T extends Readonly<string>> = TF.IsStringLiteral<T> extends
   true ? Uppercase<T> : string;
 
 /**

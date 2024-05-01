@@ -1,9 +1,9 @@
-import type { IsStringLiteral, Split } from "type-fest";
+import type * as TF from "type-fest";
 
 type SplitString<
   T extends Readonly<string>,
   U extends Readonly<string>,
-> = IsStringLiteral<T> extends true ? Readonly<Split<T, U>>
+> = TF.IsStringLiteral<T> extends true ? Readonly<TF.Split<T, U>>
   : Readonly<string[]>;
 
 /**
