@@ -26,6 +26,7 @@ A collection of type-safe string functions written in pure TypeScript.
 - [`lowercase`](src/lowercase.ts) - Convert a string to lowercase.
 - [`split`](src/split.ts) - Split a string into substrings using the specified
   separator and return them as an array.
+- [`concat`](src/concat.ts) - Concatenate strings.
 
 ## Related Works
 
