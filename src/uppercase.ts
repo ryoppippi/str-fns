@@ -4,7 +4,7 @@ type UppercaseString<T extends Readonly<string>> = IsStringLiteral<T> extends
   true ? Uppercase<T> : string;
 
 /**
- * @description get uppercase string
+ * get uppercase string
  *
  * ```ts
  * import { uppercase } from '@ryoppippi/str-fns'
