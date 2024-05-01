@@ -4,18 +4,16 @@ type CapitalizedString<T extends Readonly<string>> = IsStringLiteral<T> extends
   true ? Capitalize<T> : string;
 
 /**
- * @description capitalize first letter of string
+ * capitalize first letter of string
+ *
+ * ```ts
+ * import { capitalize } from '@ryoppippi/str-fns'
+ * const _: 'A' = capitalize('a');
+ * const __: 'Abc' = capitalize('abc');
+ * const ___: '' = capitalize('');
+ * ```
  *
  * @param input - input string to capitalize. type should be matched to T
- *
- * @example
- * capitalize('a') // returns 'A'
- *
- * @example
- * capitalize('abc') // returns 'Abc'
- *
- * @example
- * capitalize('') // returns ''
  */
 export function capitalize<T extends Readonly<string>>(
   input: T,

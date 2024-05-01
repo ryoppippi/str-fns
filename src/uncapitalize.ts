@@ -4,18 +4,16 @@ type UncapitalizedString<T extends Readonly<string>> =
   IsStringLiteral<T> extends true ? Uncapitalize<T> : string;
 
 /**
- * @description uncapitalize first letter of string
+ *  uncapitalize first letter of string
+ *
+ * ```ts
+ * import { uncapitalize } from '@ryoppippi/str-fns'
+ * const _: 'a' = uncapitalize('A');
+ * const __: 'abc' = uncapitalize('Abc');
+ * const ___: '' = uncapitalize('');
+ * ```
  *
  * @param input - input string to capitalize. type should be matched to T
- *
- * @example
- * uncapitalize('A') // returns 'a'
- *
- * @example
- * uncapitalize('Abc') // returns 'abc'
- *
- * @example
- * uncapitalize('') // returns ''
  */
 export function uncapitalize<T extends Readonly<string>>(
   input: T,

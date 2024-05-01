@@ -7,23 +7,19 @@ type SplitString<
   : Readonly<string[]>;
 
 /**
- * @description Split string by separator
+ *  Split string by separator
+ *
+ * ```ts
+ * import { split } from '@ryoppippi/str-fns'
+ * const _: readonly ['A', 'c'] = split('Abc', 'b');
+ * const __: readonly ['a', 'b', 'c'] = split('a-b-c', '-');
+ * const ___: readonly ['a', '-', 'b', '-', 'c'] = split('a-b-c', '');
+ * const ____: readonly ['a-b-c'] = split('a-b-c', '$');
+ * ```
  *
  * @param input - string to split. type should be matched to T
  *
  * @param separator - separator to split string. type should be matched to U
- *
- * @example
- * split('Abc', 'b') // returns ['A', 'c']
- *
- * @example
- * split('a-b-c', '-') // returns ['a', 'b', 'c']
- *
- * @example
- * split('a-b-c', '') // returns ['a', '-', 'b', '-', 'c']
- *
- * @example
- * split('a-b-c', '$') // returns ['a-b-c']
  */
 export function split<T extends Readonly<string>, U extends Readonly<string>>(
   input: T,
