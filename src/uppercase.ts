@@ -6,16 +6,14 @@ type UppercaseString<T extends Readonly<string>> = IsStringLiteral<T> extends
 /**
  * @description get uppercase string
  *
+ * ```ts
+ * import { uppercase } from '@ryoppippi/str-fns'
+ * const _: 'A' = uppercase('a');
+ * const __: 'ABC' = uppercase('abc');
+ * const ___: '' = uppercase('');
+ * ```
+ *
  * @param input - input string to capitalize. type should be matched to T
- *
- * @example
- * uppercase('a') // 'A'
- *
- * @example
- * uppercase('abc') // 'Abc'
- *
- * @example
- * uppercase('') // ''
  */
 export function uppercase<T extends Readonly<string>>(
   input: T,
