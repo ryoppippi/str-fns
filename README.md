@@ -8,7 +8,7 @@
 
 
 
-A collection of type-safe string functions written in pure JavaScript + JSDoc.
+A collection of type-safe string functions written in pure TypeScript.
 
 ## Why str-fns
 
@@ -31,3 +31,7 @@ A collection of type-safe string functions written in pure JavaScript + JSDoc.
 
 - [native-dash](https://github.com/yankeeinlondon/native-dash)
 - [type-fest](https://github.com/sindresorhus/type-fest)
+
+## License
+
+MIT
