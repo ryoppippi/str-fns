@@ -1,5 +1,5 @@
 import { assertEquals } from "assert";
-import type { AssertTrue, IsExact } from "type-testing";
+import type { IsExact } from "type-testing";
 import { uppercase } from "./uppercase.ts";
 
 Deno.test("should uppercase one letter", () => {
@@ -7,7 +7,7 @@ Deno.test("should uppercase one letter", () => {
   const uppercased = uppercase(before);
   const expected = "A" as const;
   assertEquals(uppercased, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof uppercased>>;
+  true satisfies IsExact<typeof expected, typeof uppercased>;
 });
 
 Deno.test("should uppercase a word", () => {
@@ -15,7 +15,7 @@ Deno.test("should uppercase a word", () => {
   const uppercased = uppercase(before);
   const expected = "HELLO" as const;
   assertEquals(uppercased, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof uppercased>>;
+  true satisfies IsExact<typeof expected, typeof uppercased>;
 });
 
 Deno.test("should uppercase a sentence", () => {
@@ -23,7 +23,7 @@ Deno.test("should uppercase a sentence", () => {
   const uppercased = uppercase(before);
   const expected = "HELLO WORLD" as const;
   assertEquals(uppercased, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof uppercased>>;
+  true satisfies IsExact<typeof expected, typeof uppercased>;
 });
 
 Deno.test("should uppercase empty string", () => {
@@ -31,5 +31,5 @@ Deno.test("should uppercase empty string", () => {
   const uppercased = uppercase(before);
   const expected = "" as const;
   assertEquals(uppercased, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof uppercased>>;
+  true satisfies IsExact<typeof expected, typeof uppercased>;
 });
