@@ -24,8 +24,8 @@ jobs:
       - name: Test
         run: |
           deno lint
-          deno fmt --check
           deno task check
+          deno task lint
           deno task test:coverage
           deno task coverage:lco
       - name: Upload coverage reports to Codecov

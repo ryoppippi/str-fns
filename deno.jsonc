@@ -8,7 +8,8 @@
   "importMap": "./import_map.json",
   "tasks": {
     "dev": "deno run --watch ./src/index.ts",
-    "check": "deno check ./**/*.ts",
+    "check": "deno check ./**/*.ts && deno fmt --check",
+    "lint": "deno lint ./**/*.ts",
     "test": "deno test -A --parallel --doc",
     "test:coverage": "deno task test --coverage=coverage",
     "coverage:show": "deno coverage ./coverage",
