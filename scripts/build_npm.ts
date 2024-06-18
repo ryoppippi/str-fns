@@ -15,7 +15,6 @@ await build({
   typeCheck: false,
   test: false,
   entryPoints: ["src/index.ts"],
-  importMap: "./import_map.json",
   outDir: "./npm",
   shims: {
     deno: "dev",
