@@ -1,8 +1,9 @@
-import { assertEquals } from "assert";
+import { test } from "@cross/test";
+import { assertEquals } from "@std/assert";
 import type { IsExact } from "type-testing";
 import { uncapitalize } from "./uncapitalize.ts";
 
-Deno.test("should uncapitalize one letter", () => {
+test("should uncapitalize one letter", () => {
   const before = "A" as const;
   const uncapitalized = uncapitalize(before);
   const expected = "a" as const;
@@ -10,7 +11,7 @@ Deno.test("should uncapitalize one letter", () => {
   true satisfies IsExact<typeof expected, typeof uncapitalized>;
 });
 
-Deno.test("should uncapitalize a word", () => {
+test("should uncapitalize a word", () => {
   const before = "Hello" as const;
   const uncapitalized = uncapitalize(before);
   const expected = "hello" as const;
@@ -18,7 +19,7 @@ Deno.test("should uncapitalize a word", () => {
   true satisfies IsExact<typeof expected, typeof uncapitalized>;
 });
 
-Deno.test("should uncapitalize a sentence", () => {
+test("should uncapitalize a sentence", () => {
   const before = "Hello World" as const;
   const uncapitalized = uncapitalize(before);
   const expected = "hello World" as const;
@@ -26,7 +27,7 @@ Deno.test("should uncapitalize a sentence", () => {
   true satisfies IsExact<typeof expected, typeof uncapitalized>;
 });
 
-Deno.test("should uncapitalize empty string", () => {
+test("should uncapitalize empty string", () => {
   const before = "" as const;
   const uncapitalized = uncapitalize(before);
   const expected = "" as const;

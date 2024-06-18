@@ -2,25 +2,37 @@
   "version": "3",
   "packages": {
     "specifiers": {
+      "jsr:@cross/runtime@^1.0.0": "jsr:@cross/runtime@1.0.0",
+      "jsr:@cross/test@^0.0.9": "jsr:@cross/test@0.0.9",
       "jsr:@deno/cache-dir@^0.8.0": "jsr:@deno/cache-dir@0.8.0",
       "jsr:@deno/dnt@^0.41.1": "jsr:@deno/dnt@0.41.1",
       "jsr:@deno/graph@^0.69.7": "jsr:@deno/graph@0.69.10",
-      "jsr:@std/assert@0.222.1": "jsr:@std/assert@0.222.1",
       "jsr:@std/assert@^0.218.2": "jsr:@std/assert@0.218.2",
+      "jsr:@std/assert@^0.226.0": "jsr:@std/assert@0.226.0",
       "jsr:@std/bytes@^0.218.2": "jsr:@std/bytes@0.218.2",
       "jsr:@std/fmt@^0.218.2": "jsr:@std/fmt@0.218.2",
-      "jsr:@std/fmt@^0.222.1": "jsr:@std/fmt@0.222.1",
       "jsr:@std/fs@^0.218.2": "jsr:@std/fs@0.218.2",
+      "jsr:@std/internal@^1.0.0": "jsr:@std/internal@1.0.0",
       "jsr:@std/io@^0.218.2": "jsr:@std/io@0.218.2",
       "jsr:@std/path@^0.218.2": "jsr:@std/path@0.218.2",
       "jsr:@std/testing@0.222.1": "jsr:@std/testing@0.222.1",
       "npm:@ts-morph/bootstrap@0.22": "npm:@ts-morph/bootstrap@0.22.0",
+      "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:code-block-writer@^13.0.1": "npm:code-block-writer@13.0.1",
       "npm:type-fest@4.15.0": "npm:type-fest@4.15.0",
       "npm:type-fest@4.18.0": "npm:type-fest@4.18.0",
       "npm:type-fest@4.18.1": "npm:type-fest@4.18.1"
     },
     "jsr": {
+      "@cross/runtime@1.0.0": {
+        "integrity": "dddecdf99182df13d50279d1e473f715e83d41961c5c22edd7bb0c4c3cf8a76a"
+      },
+      "@cross/test@0.0.9": {
+        "integrity": "2aa8237a96a2f8f51ccc8fec71135616d223bf4f38dd89ba4f863037c85ddc56",
+        "dependencies": [
+          "jsr:@cross/runtime@^1.0.0"
+        ]
+      },
       "@deno/cache-dir@0.8.0": {
         "integrity": "e87e80a404958f6350d903e6238b72afb92468378b0b32111f7a1e4916ac7fe7",
         "dependencies": [
@@ -46,10 +58,10 @@
       "@std/assert@0.218.2": {
         "integrity": "7f0a5a1a8cf86607cd6c2c030584096e1ffad27fc9271429a8cb48cfbdee5eaf"
       },
-      "@std/assert@0.222.1": {
-        "integrity": "691637161ee584a9919d1f9950ddd1272feb8e0a19e83aa5b7563cedaf73d74c",
+      "@std/assert@0.226.0": {
+        "integrity": "0dfb5f7c7723c18cec118e080fec76ce15b4c31154b15ad2bd74822603ef75b3",
         "dependencies": [
-          "jsr:@std/fmt@^0.222.1"
+          "jsr:@std/internal@^1.0.0"
         ]
       },
       "@std/bytes@0.218.2": {
@@ -58,15 +70,15 @@
       "@std/fmt@0.218.2": {
         "integrity": "99526449d2505aa758b6cbef81e7dd471d8b28ec0dcb1491d122b284c548788a"
       },
-      "@std/fmt@0.222.1": {
-        "integrity": "ec3382f9b0261c1ab1a5c804aa355d816515fa984cdd827ed32edfb187c0a722"
-      },
       "@std/fs@0.218.2": {
         "integrity": "dd9431453f7282e8c577cc22c9e6d036055a9a980b5549f887d6012969fabcca",
         "dependencies": [
           "jsr:@std/assert@^0.218.2",
           "jsr:@std/path@^0.218.2"
         ]
+      },
+      "@std/internal@1.0.0": {
+        "integrity": "ac6a6dfebf838582c4b4f61a6907374e27e05bedb6ce276e0f1608fe84e7cd9a"
       },
       "@std/io@0.218.2": {
         "integrity": "c64fbfa087b7c9d4d386c5672f291f607d88cb7d44fc299c20c713e345f2785f",
@@ -117,6 +129,10 @@
           "mkdirp": "mkdirp@3.0.1",
           "path-browserify": "path-browserify@1.0.1"
         }
+      },
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
       },
       "balanced-match@1.0.2": {
         "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
@@ -281,5 +297,14 @@
     "https://deno.land/std@0.222.1/assert/unreachable.ts": "5ae3dbf63ef988615b93eb08d395dda771c96546565f9e521ed86f6510c29e19",
     "https://deno.land/std@0.222.1/fmt/colors.ts": "d239d84620b921ea520125d778947881f62c50e78deef2657073840b8af9559a",
     "https://deno.land/std@0.222.1/testing/types.ts": "36e519e8735884ce60ddd284195a28f6d22f83d3effe5df0ce27bafc17b5655d"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@cross/test@^0.0.9",
+      "jsr:@deno/dnt@^0.41.1",
+      "jsr:@std/assert@^0.226.0",
+      "jsr:@std/testing@0.222.1",
+      "npm:type-fest@4.18.1"
+    ]
   }
 }

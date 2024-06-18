@@ -1,8 +1,9 @@
-import { assertEquals } from "assert";
+import { test } from "@cross/test";
+import { assertEquals } from "@std/assert";
 import type { IsExact } from "type-testing";
 import { lowercase } from "./lowercase.ts";
 
-Deno.test("should lowercase a word", () => {
+test("should lowercase a word", () => {
   const before = "hEllO" as const;
   const lowercased = lowercase(before);
   const expected = "hello" as const;
@@ -10,7 +11,7 @@ Deno.test("should lowercase a word", () => {
   true satisfies IsExact<typeof expected, typeof lowercased>;
 });
 
-Deno.test("should lowercase a sentence", () => {
+test("should lowercase a sentence", () => {
   const before = "hellO wOrld" as const;
   const lowercased = lowercase(before);
   const expected = "hello world" as const;
@@ -18,7 +19,7 @@ Deno.test("should lowercase a sentence", () => {
   true satisfies IsExact<typeof expected, typeof lowercased>;
 });
 
-Deno.test("should lowercase empty string", () => {
+test("should lowercase empty string", () => {
   const before = "" as const;
   const lowercased = lowercase(before);
   const expected = "" as const;
