@@ -1,5 +1,5 @@
 import { assertEquals } from "assert";
-import type { AssertTrue, IsExact } from "type-testing";
+import type { IsExact } from "type-testing";
 import { capitalize } from "./capitalize.ts";
 
 Deno.test("should capitalize one lowercase letter", () => {
@@ -7,7 +7,7 @@ Deno.test("should capitalize one lowercase letter", () => {
   const capitalized = capitalize(before);
   const expected = "A" as const;
   assertEquals(capitalized, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof capitalized>>;
+  true satisfies IsExact<typeof expected, typeof capitalized>;
 });
 
 Deno.test("should capitalize one uppercase letter", () => {
@@ -15,7 +15,7 @@ Deno.test("should capitalize one uppercase letter", () => {
   const capitalized = capitalize(before);
   const expected = "A" as const;
   assertEquals(capitalized, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof capitalized>>;
+  true satisfies IsExact<typeof expected, typeof capitalized>;
 });
 
 Deno.test("should capitalize multiple letters", () => {
@@ -23,7 +23,7 @@ Deno.test("should capitalize multiple letters", () => {
   const capitalized = capitalize(before);
   const expected = "Abc" as const;
   assertEquals(capitalized, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof capitalized>>;
+  true satisfies IsExact<typeof expected, typeof capitalized>;
 });
 
 Deno.test("should capitalize empty string", () => {
@@ -31,5 +31,5 @@ Deno.test("should capitalize empty string", () => {
   const capitalized = capitalize(before);
   const expected = "" as const;
   assertEquals(capitalized, expected);
-  type _ = AssertTrue<IsExact<typeof expected, typeof capitalized>>;
+  true satisfies IsExact<typeof expected, typeof capitalized>;
 });
