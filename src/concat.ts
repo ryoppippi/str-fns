@@ -18,7 +18,7 @@ type ConcatedString<T extends readonly string[]> = ConcatingLoop<T>;
  * const ___: 'hello world' = concat('hello', ' ', 'world');
  *
  * const random = Math.random();
- * const _: `a${string}` = concat("a", random.tostring());
+ * const ____: `a${string}` = concat("a", random.toString());
  * ```
  *
  * @param ...inputs - strings to concat
