@@ -15,7 +15,7 @@
       "jsr:@std/internal@^1.0.0": "jsr:@std/internal@1.0.0",
       "jsr:@std/io@^0.218.2": "jsr:@std/io@0.218.2",
       "jsr:@std/path@^0.218.2": "jsr:@std/path@0.218.2",
-      "jsr:@std/testing@0.225.2": "jsr:@std/testing@0.225.2",
+      "jsr:@std/testing@0.225.3": "jsr:@std/testing@0.225.3",
       "npm:@ts-morph/bootstrap@0.22": "npm:@ts-morph/bootstrap@0.22.0",
       "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:code-block-writer@^13.0.1": "npm:code-block-writer@13.0.1",
@@ -92,8 +92,8 @@
           "jsr:@std/assert@^0.218.2"
         ]
       },
-      "@std/testing@0.225.2": {
-        "integrity": "ae5a55e412926acdba98ec3b72aba93d2ab40cad3d0cd2454b048c10ca3584d8"
+      "@std/testing@0.225.3": {
+        "integrity": "348c24d0479d44ab3dbb4f26170f242e19f24051b45935d4a9e7ca0ab7e37780"
       }
     },
     "npm": {
@@ -303,7 +303,7 @@
       "jsr:@cross/test@^0.0.9",
       "jsr:@deno/dnt@^0.41.1",
       "jsr:@std/assert@^0.226.0",
-      "jsr:@std/testing@0.225.2",
+      "jsr:@std/testing@0.225.3",
       "npm:type-fest@4.20.1"
     ]
   }
