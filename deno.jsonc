@@ -10,7 +10,7 @@
     "@deno/dnt": "jsr:@deno/dnt@^0.41.1",
     "@ryoppippi/str-fns": "./mod.ts",
     "@std/assert": "jsr:@std/assert@^0.226.0",
-    "type-fest": "npm:type-fest@4.20.1",
+    "type-fest": "npm:type-fest@4.21.0",
     "type-testing": "jsr:@std/testing@0.225.3/types"
   },
   "tasks": {
