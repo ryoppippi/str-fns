@@ -20,8 +20,7 @@
     "test": "deno test -A --parallel --doc",
     "test:coverage": "deno task test --coverage=coverage",
     "coverage:show": "deno coverage ./coverage",
-    "coverage:lco": "deno coverage --lcov ./coverage > ./coverage/lcov.info",
-    "build-npm": "deno run -A scripts/build_npm.ts $(git describe --tags --always --dirty)"
+    "coverage:lco": "deno coverage --lcov ./coverage > ./coverage/lcov.info"
   },
   "fmt": {
     "exclude": [
