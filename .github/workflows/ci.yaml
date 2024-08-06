@@ -45,35 +45,10 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
       - run: deno publish --dry-run
 
-  npm-publish-dry-run-and-upload-pkg-pr-now:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: denoland/setup-deno@v1
-        with:
-          deno-version: ${{ env.DENO_VERSION }}
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: "https://registry.npmjs.org"
-      - run: deno task build-npm
-      - name: npm publish dry-run
-        run: npm publish --dry-run
-        working-directory: npm/
-      - name: upload to pkg.pr.now
-        run: bunx pkg-pr-new publish
-        working-directory: npm/
-
   action-timeline:
     needs: 
       - check-test
       - jsr-publish-dry-run
-      - npm-publish-dry-run-and-upload-pkg-pr-now
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
