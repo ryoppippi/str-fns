@@ -10,29 +10,6 @@ on:
       - "*"
 
 jobs:
-  npm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: denoland/setup-deno@v1
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: "https://registry.npmjs.org"
-      - name: Build
-        run: deno task build-npm
-      - name: Publish
-        run: |
-          cd npm
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
   jsr:
     runs-on: ubuntu-latest
     permissions:
@@ -51,7 +28,6 @@ jobs:
 
   release:
     needs:
-      - npm
       - jsr
     runs-on: ubuntu-latest
     permissions:

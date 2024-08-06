@@ -6,9 +6,6 @@
 [![JSR](https://jsr.io/badges/@ryoppippi/str-fns)](https://jsr.io/@ryoppippi/str-fns)
 [![JSR Score](https://jsr.io/badges/@ryoppippi/str-fns/score)](https://jsr.io/@ryoppippi/str-fns)
 
-[![npm version](https://badgen.net/npm/v/str-fns)](https://www.npmjs.com/package/str-fns)
-<a href="https://pkg-size.dev/str-fns"><img src="https://pkg-size.dev/badge/bundle/377" title="Bundle size for str-fns"></a>
-
 
 A collection of type-safe string functions written in pure TypeScript.
 
