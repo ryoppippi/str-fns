@@ -9,9 +9,9 @@
     "@cross/test": "jsr:@cross/test@^0.0.9",
     "@deno/dnt": "jsr:@deno/dnt@^0.41.1",
     "@ryoppippi/str-fns": "./mod.ts",
-    "@std/assert": "jsr:@std/assert@^0.226.0",
+    "@std/assert": "jsr:@std/assert@^1.0.0",
     "type-fest": "npm:type-fest@4.23.0",
-    "type-testing": "jsr:@std/testing@0.225.3/types"
+    "type-testing": "jsr:@std/testing@1.0.0/types"
   },
   "tasks": {
     "dev": "deno run --watch ./mod.ts",
