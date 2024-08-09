@@ -26,7 +26,7 @@
       "npm:code-block-writer@^13.0.1": "npm:code-block-writer@13.0.2",
       "npm:type-fest@4.15.0": "npm:type-fest@4.15.0",
       "npm:type-fest@4.18.0": "npm:type-fest@4.18.0",
-      "npm:type-fest@4.23.0": "npm:type-fest@4.23.0"
+      "npm:type-fest@4.24.0": "npm:type-fest@4.24.0"
     },
     "jsr": {
       "@cross/runtime@1.0.0": {
@@ -287,8 +287,8 @@
         "integrity": "sha512-+dbmiyliDY/2TTcjCS7NpI9yV2iEFlUDk5TKnsbkN7ZoRu5s7bT+zvYtNFhFXC2oLwURGT2frACAZvbbyNBI+w==",
         "dependencies": {}
       },
-      "type-fest@4.23.0": {
-        "integrity": "sha512-ZiBujro2ohr5+Z/hZWHESLz3g08BBdrdLMieYFULJO+tWc437sn8kQsWLJoZErY8alNhxre9K4p3GURAG11n+w==",
+      "type-fest@4.24.0": {
+        "integrity": "sha512-spAaHzc6qre0TlZQQ2aA/nGMe+2Z/wyGk5Z+Ru2VUfdNwT6kWO6TjevOlpebsATEG1EIQ2sOiDszud3lO5mt/Q==",
         "dependencies": {}
       }
     }
@@ -304,7 +304,7 @@
       "jsr:@deno/dnt@^0.41.1",
       "jsr:@std/assert@^1.0.0",
       "jsr:@std/testing@1.0.0",
-      "npm:type-fest@4.23.0"
+      "npm:type-fest@4.24.0"
     ]
   }
 }
