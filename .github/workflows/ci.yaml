@@ -1,12 +1,12 @@
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: "0 9 * * *"
   push:
   pull_request:
 
 env:
-  DENO_VERSION: 1.x
-  NODE_VERSION: 20.x
+  DENO_VERSION: 2.x
+  NODE_VERSION: lts/*
 
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
       - uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
           deno-version: ${{ env.DENO_VERSION }}
-      - run: deno lint 
+      - run: deno lint
       - name: Test
         run: |
           deno lint
@@ -46,10 +46,10 @@ jobs:
       - run: deno publish --dry-run
 
   action-timeline:
-    needs: 
+    needs:
       - check-test
       - jsr-publish-dry-run
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
-    - uses: Kesin11/actions-timeline@427ee2cf860166e404d0d69b4f2b24012bb7af4f # v2.2.3
+      - uses: Kesin11/actions-timeline@427ee2cf860166e404d0d69b4f2b24012bb7af4f # v2.2.3

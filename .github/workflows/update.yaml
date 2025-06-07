@@ -2,6 +2,10 @@
 
 name: Deno Update
 
+env:
+  DENO_VERSION: 2.x
+  NODE_VERSION: lts/*
+
 on:
   schedule:
     - cron: "0 9 * * *"
@@ -19,7 +23,7 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
-          deno-version: v1.x
+          deno-version: ${{ env.DENO_VERSION }}
 
       - name: Update dependencies with molt
         id: run-deno-molt
@@ -58,4 +62,3 @@ jobs:
           branch: molt-update
           author: GitHub <noreply@github.com>
           delete-branch: true
-
