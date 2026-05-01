@@ -11,7 +11,7 @@
     "jsr:@std/internal@^1.0.12": "1.0.13",
     "jsr:@std/path@1": "1.1.4",
     "jsr:@std/path@^1.1.4": "1.1.4",
-    "jsr:@std/testing@1.0.0": "1.0.0",
+    "jsr:@std/testing@1.0.18": "1.0.18",
     "jsr:@ts-morph/bootstrap@0.27": "0.27.0",
     "jsr:@ts-morph/common@0.27": "0.27.0",
     "npm:@types/node@*": "18.16.19",
@@ -67,8 +67,8 @@
         "jsr:@std/internal"
       ]
     },
-    "@std/testing@1.0.0": {
-      "integrity": "27cfc06392c69c2acffe54e6d0bcb5f961cf193f519255372bd4fff1481bfef8"
+    "@std/testing@1.0.18": {
+      "integrity": "d3152f57b11666bf6358d0e127c7e3488e91178b0c2d8fbf0793e1c53cd13cb1"
     },
     "@ts-morph/bootstrap@0.27.0": {
       "integrity": "b8d7bc8f7942ce853dde4161b28f9aa96769cef3d8eebafb379a81800b9e2448",
@@ -107,7 +107,7 @@
       "jsr:@cross/test@^0.0.14",
       "jsr:@deno/dnt@~0.42.3",
       "jsr:@std/assert@^1.0.19",
-      "jsr:@std/testing@1.0.0",
+      "jsr:@std/testing@1.0.18",
       "npm:type-fest@4.25.0"
     ]
   }
