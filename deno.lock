@@ -17,7 +17,7 @@
     "npm:@types/node@*": "18.16.19",
     "npm:type-fest@4.15.0": "4.15.0",
     "npm:type-fest@4.18.0": "4.18.0",
-    "npm:type-fest@5.7.0": "5.7.0"
+    "npm:type-fest@5.8.0": "5.8.0"
   },
   "jsr": {
     "@cross/runtime@1.0.0": {
@@ -97,8 +97,8 @@
     "type-fest@4.18.0": {
       "integrity": "sha512-+dbmiyliDY/2TTcjCS7NpI9yV2iEFlUDk5TKnsbkN7ZoRu5s7bT+zvYtNFhFXC2oLwURGT2frACAZvbbyNBI+w=="
     },
-    "type-fest@5.7.0": {
-      "integrity": "sha512-1URUxUqfHFM1c+zfSPsa3gnkO7Aq21qyH75SIduNYz4SzY964rn1X2vCMQaHSHhktiw+0kPa2iyb6PUpXqB6Vg==",
+    "type-fest@5.8.0": {
+      "integrity": "sha512-YGYEVz3Fm5iy/AybuA0oyNFq7H4CgQNfRp/qfe8nurE1kuCeNm3/vfm9X4Mtl+qLyaKJUh5xrFZwogr41SMjYA==",
       "dependencies": [
         "tagged-tag"
       ]
@@ -114,7 +114,7 @@
       "jsr:@deno/dnt@~0.42.3",
       "jsr:@std/assert@^1.0.19",
       "jsr:@std/testing@1.0.0",
-      "npm:type-fest@5.7.0"
+      "npm:type-fest@5.8.0"
     ]
   }
 }
