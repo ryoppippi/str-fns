@@ -4,7 +4,7 @@
     "jsr:@cross/runtime@1.0": "1.0.0",
     "jsr:@cross/test@^0.0.14": "0.0.14",
     "jsr:@david/code-block-writer@^13.0.3": "13.0.3",
-    "jsr:@deno/dnt@~0.43.1": "0.43.1",
+    "jsr:@deno/dnt@~0.43.2": "0.43.2",
     "jsr:@std/assert@^1.0.19": "1.0.19",
     "jsr:@std/fmt@1": "1.0.10",
     "jsr:@std/fs@1": "1.0.24",
@@ -33,8 +33,8 @@
     "@david/code-block-writer@13.0.3": {
       "integrity": "f98c77d320f5957899a61bfb7a9bead7c6d83ad1515daee92dbacc861e13bb7f"
     },
-    "@deno/dnt@0.43.1": {
-      "integrity": "505217527cc31afd47f5a5cdde57100dfc61498df7ca093b73a2e0feaf9c6a77",
+    "@deno/dnt@0.43.2": {
+      "integrity": "8068703a782f389d9fcb4ead32809ca666d3b088262a23f1d9016cbc9af5d37f",
       "dependencies": [
         "jsr:@david/code-block-writer",
         "jsr:@std/fmt",
@@ -112,7 +112,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@cross/test@^0.0.14",
-      "jsr:@deno/dnt@~0.43.1",
+      "jsr:@deno/dnt@~0.43.2",
       "jsr:@std/assert@^1.0.19",
       "jsr:@std/testing@1.0.0",
       "npm:type-fest@5.7.0"
