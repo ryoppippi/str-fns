@@ -15,9 +15,6 @@
     "jsr:@std/testing@1.0.20": "1.0.20",
     "jsr:@ts-morph/bootstrap@0.29": "0.29.0",
     "jsr:@ts-morph/common@0.29": "0.29.0",
-    "npm:@types/node@*": "18.16.19",
-    "npm:type-fest@4.15.0": "4.15.0",
-    "npm:type-fest@4.18.0": "4.18.0",
     "npm:type-fest@5.7.0": "5.7.0"
   },
   "jsr": {
@@ -86,17 +83,8 @@
     }
   },
   "npm": {
-    "@types/node@18.16.19": {
-      "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA=="
-    },
     "tagged-tag@1.0.0": {
       "integrity": "sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng=="
-    },
-    "type-fest@4.15.0": {
-      "integrity": "sha512-tB9lu0pQpX5KJq54g+oHOLumOx+pMep4RaM6liXh2PKmVRFF+/vAtUP0ZaJ0kOySfVNjF6doBWPHhBhISKdlIA=="
-    },
-    "type-fest@4.18.0": {
-      "integrity": "sha512-+dbmiyliDY/2TTcjCS7NpI9yV2iEFlUDk5TKnsbkN7ZoRu5s7bT+zvYtNFhFXC2oLwURGT2frACAZvbbyNBI+w=="
     },
     "type-fest@5.7.0": {
       "integrity": "sha512-1URUxUqfHFM1c+zfSPsa3gnkO7Aq21qyH75SIduNYz4SzY964rn1X2vCMQaHSHhktiw+0kPa2iyb6PUpXqB6Vg==",
@@ -104,10 +92,6 @@
         "tagged-tag"
       ]
     }
-  },
-  "redirects": {
-    "https://deno.land/std/testing/asserts.ts": "https://deno.land/std@0.222.1/testing/asserts.ts",
-    "https://deno.land/std/testing/types.ts": "https://deno.land/std@0.222.1/testing/types.ts"
   },
   "workspace": {
     "dependencies": [
