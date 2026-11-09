@@ -38,7 +38,9 @@ test("should concat a string and a non-literal string and generate literal type"
     Math.random().toString(),
   ] as const;
   const concated = concat("ab", ...randoms, "c");
-  const expected = `ab${randoms.join("")}c` as const satisfies `ab${string}c`;
+  const [first, second] = randoms;
+  const expected =
+    `ab${first}${second}c` as const satisfies `ab${string}${string}c`;
   assertEquals(concated, expected);
   true satisfies IsExact<typeof expected, typeof concated>;
 });
