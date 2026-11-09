@@ -44,3 +44,11 @@ test("should concat a string and a non-literal string and generate literal type"
   assertEquals(concated, expected);
   true satisfies IsExact<typeof expected, typeof concated>;
 });
+
+test("should concat a non-tuple array into a plain string", () => {
+  const inputs: string[] = ["a", "b"];
+  const concated = concat(...inputs);
+  const expected: string = "ab";
+  assertEquals(concated, expected);
+  true satisfies IsExact<typeof expected, typeof concated>;
+});
