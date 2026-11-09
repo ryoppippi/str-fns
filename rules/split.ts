@@ -24,6 +24,7 @@ type SplitString<
 export function split<T extends Readonly<string>, U extends Readonly<string>>(
   input: T,
   separator: U,
-): SplitString<T, U> {
+): SplitString<T, U>;
+export function split(input: string, separator: string): readonly string[] {
   return input.split(separator);
 }

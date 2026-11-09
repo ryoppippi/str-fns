@@ -17,5 +17,5 @@ type LowercaseString<T extends Readonly<string>> = TF.IsStringLiteral<T> extends
 export function lowercase<T extends Readonly<string>>(
   input: T,
 ): LowercaseString<T> {
-  return input.toLowerCase();
+  return input.toLowerCase() as LowercaseString<T>;
 }

@@ -19,5 +19,5 @@ export function uncapitalize<T extends Readonly<string>>(
   input: T,
 ): UncapitalizedString<T> {
   const [first, ...rest] = input;
-  return [first?.toLowerCase(), ...rest].join("");
+  return [first?.toLowerCase(), ...rest].join("") as UncapitalizedString<T>;
 }

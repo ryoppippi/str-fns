@@ -18,5 +18,5 @@ type UppercaseString<T extends Readonly<string>> = TF.IsStringLiteral<T> extends
 export function uppercase<T extends Readonly<string>>(
   input: T,
 ): UppercaseString<T> {
-  return input.toUpperCase();
+  return input.toUpperCase() as UppercaseString<T>;
 }

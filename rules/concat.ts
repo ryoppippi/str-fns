@@ -1,10 +1,11 @@
-import type * as TF from "type-fest";
-
 type ConcatingLoop<
   T extends readonly string[],
   R extends string = "",
-> = [] extends T ? R
-  : ConcatingLoop<TF.ArraySlice<T, 0, -1>, `${TF.LastArrayElement<T>}${R}`>;
+> = T extends
+  readonly [infer Head extends string, ...infer Rest extends string[]]
+  ? ConcatingLoop<Rest, `${R}${Head}`>
+  : T extends readonly [] ? R
+  : `${R}${string}`;
 
 type ConcatedString<T extends readonly string[]> = ConcatingLoop<T>;
 

@@ -19,5 +19,5 @@ export function capitalize<T extends Readonly<string>>(
   input: T,
 ): CapitalizedString<T> {
   const [first, ...rest] = input;
-  return [first?.toUpperCase(), ...rest].join("");
+  return [first?.toUpperCase(), ...rest].join("") as CapitalizedString<T>;
 }
